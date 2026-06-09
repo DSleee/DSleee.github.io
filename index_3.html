@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dongsoo Lee | ML Scientist</title>
+<meta name="description" content="Dongsoo Lee — ML Scientist & Biostatistics PhD candidate at Emory University. Statistical learning for genomics and medical AI." />
+
+<!-- To keep the site hidden from Google while you build, KEEP the next line.
+     Delete it when you are ready to be found in search. -->
+<meta name="robots" content="noindex, nofollow" />
+
+<!-- ============================================================
+     HOW TO EDIT THIS FILE
+     ------------------------------------------------------------
+     Change the text between tags, save, then run:
+         git add .
+         git commit -m "Update homepage"
+         git push
+     The live site updates in ~1 minute.
+
+     QUICK MAP (press Ctrl+F and type the word in CAPS):
+       COLORS / FONTS .. the :root block below
+       PHOTO ........... your headshot
+       RESUME .......... the resume button
+       NAV ............. the top menu
+       SKILLS .......... skill chips
+       PROJECT CARD .... a project entry
+       BADGE ........... the blue "Invited talk" label
+       EXPERIENCE ...... work history
+       PUBLICATIONS .... papers & patents
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- FONTS (free, open-license Google Fonts):
+       Space Grotesk = modern/trendy headings
+       Public Sans   = highly readable body text -->
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   COLORS & FONTS — edit these to re-skin the whole site.
+   Palette is Emory Blue (#012169) on white.
+   ============================================================ */
+:root{
+  --navy:#012169;          /* Emory Blue — primary color        */
+  --navy-deep:#01163f;     /* darker navy (hero depth, footer)  */
+  --blue:#1f4fb5;          /* brighter blue for links & badges  */
+  --tint:#eef2fb;          /* soft blue surface (chips, hovers) */
+  --ink:#17223a;           /* main body text (dark navy-ink)    */
+  --ink-soft:#5a6577;      /* secondary / grey text             */
+  --line:#e3e9f3;          /* light borders                     */
+  --white:#ffffff;
+  --maxw:980px;
+  --display:"Space Grotesk",system-ui,sans-serif;  /* headings */
+  --body:"Public Sans",system-ui,sans-serif;       /* body     */
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--white);color:var(--ink);
+  font-family:var(--body);font-size:17px;line-height:1.72;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* ---- NAV (sticky top bar) ---- */
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav .brand{display:flex;align-items:center;font-family:var(--display);font-weight:700;font-size:19px;color:var(--navy)} .nav .brand img{height:45px;width:auto;display:block}
+.nav .brand:hover{text-decoration:none}
+.nav ul{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
+.nav ul a{color:var(--ink-soft);font-size:15px;font-weight:500}
+.nav ul a:hover{color:var(--navy);text-decoration:none}
+@media(max-width:700px){.nav ul{gap:15px;font-size:13px}.nav .brand img{height:30px}}
+
+/* ---- HERO (the navy "thesis" band) ---- */
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy-deep));color:var(--white)}
+.hero .wrap{padding:70px 28px 64px;display:grid;grid-template-columns:1fr 200px;gap:48px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(42px,7vw,72px);line-height:1.02;letter-spacing:-.02em}
+.hero .tag{margin-top:18px;font-size:clamp(17px,2vw,21px);line-height:1.5;color:rgba(255,255,255,.82);max-width:42ch}
+.hero .links{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+.hero .links a{border:1.5px solid rgba(255,255,255,.45);color:var(--white);border-radius:999px;padding:8px 18px;font-size:14px;font-weight:600;transition:background .2s,color .2s}
+.hero .links a:hover{background:var(--white);color:var(--navy);text-decoration:none}
+.hero .photo{width:200px;height:200px;border-radius:16px;object-fit:cover;border:3px solid rgba(255,255,255,.7);box-shadow:0 22px 50px -20px rgba(0,0,0,.5);background:rgba(255,255,255,.12)}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr;gap:28px;padding:54px 28px 48px}.hero .photo{width:130px;height:130px;order:-1}}
+
+/* ---- SECTIONS ---- */
+.sec{padding:56px 0}
+.sec + .sec{border-top:1px solid var(--line)}
+.eyebrow{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);margin-bottom:22px}
+.sec p{margin-bottom:15px}
+.sec p:last-child{margin-bottom:0}
+.lead b{color:var(--navy)}
+
+/* ---- SKILLS ---- */
+.skill-row{display:grid;grid-template-columns:160px 1fr;gap:18px;padding:12px 0;border-bottom:1px solid var(--line)}
+.skill-row:last-child{border-bottom:none}
+.skill-row .cat{font-family:var(--display);font-weight:600;color:var(--navy)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--tint);color:var(--navy);font-size:13.5px;font-weight:600;padding:5px 12px;border-radius:7px}
+@media(max-width:700px){.skill-row{grid-template-columns:1fr;gap:7px}}
+
+/* ---- PROJECT CARDS ---- */
+.card{border:1px solid var(--line);border-left:3px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:16px;background:var(--white);transition:transform .2s,box-shadow .2s,border-left-color .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(1,33,105,.5);border-left-color:var(--navy)}
+.card h3{font-family:var(--display);font-weight:600;font-size:20px;color:var(--navy);margin-bottom:9px}
+.card p{color:var(--ink-soft);font-size:16px;margin-bottom:15px}
+.card-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.tag{font-size:13.5px;color:var(--ink-soft);font-style:italic}
+.foot-right{display:flex;align-items:center;gap:14px}
+
+/* ---- BADGE: blue label that links to a URL (e.g. "Invited talk") ---- */
+.badge{display:inline-block;background:var(--blue);color:var(--white);font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:6px;white-space:nowrap}
+.badge:hover{background:var(--navy);text-decoration:none}
+
+/* ---- EXPERIENCE & PUBLICATIONS ---- */
+.entry{padding:16px 0;border-bottom:1px solid var(--line)}
+.entry:last-child{border-bottom:none}
+.entry .role{font-family:var(--display);font-weight:600;color:var(--navy);font-size:17px}
+.entry .when{color:var(--ink-soft);font-size:14px;font-weight:400;font-family:var(--body)}
+.entry p{color:var(--ink-soft);font-size:16px;margin-top:5px}
+.pub{padding:13px 0;border-bottom:1px solid var(--line)}
+.pub:last-child{border-bottom:none}
+.pub b{color:var(--navy)}
+
+.contact{line-height:2.1}
+.contact b{font-family:var(--display);color:var(--navy)}
+.foot{background:var(--navy-deep);color:rgba(255,255,255,.7);text-align:center;padding:30px 0;font-size:13px}
+
+/* ---- page-load reveal (respects reduced-motion) ---- */
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.hero,.sec{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.sec:nth-of-type(1){animation-delay:.05s}
+.sec:nth-of-type(2){animation-delay:.1s}
+.sec:nth-of-type(3){animation-delay:.15s}
+.sec:nth-of-type(4){animation-delay:.2s}
+@media(prefers-reduced-motion:reduce){.hero,.sec{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV =====================
+     ADD a menu item: copy one <li><a href="#id">Label</a></li> and
+     point #id to a section's id below. REMOVE: delete its <li> line. -->
+<header class="nav">
+  <div class="wrap">
+    <a href="#" class="brand"><img src="DL_logo.png" alt="Dongsoo Lee" /></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Dongsoo Lee</h1>
+      <p class="tag">ML Scientist &amp; Biostatistics PhD candidate building statistical learning methods for genomics and medical AI.</p>
+
+      <!-- LINK BUTTONS: edit each href and label. Add a button by copying one <a> line.
+           RESUME: upload your CV as  resume.pdf  to the repo; this button points to it. -->
+      <div class="links">
+        <a href="resume.pdf">Resume</a>
+        <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="mailto:dongsoo.lee@emory.edu">Email</a>
+      </div>
+    </div>
+
+    <!-- PHOTO: upload a square photo named  profile.jpg  to the repo.
+         If it is missing, a plain box shows instead of a broken icon.
+         Remove the photo by deleting this <img> line. -->
+    <img class="photo" src="profile.jpg" alt="Dongsoo Lee"
+         onerror="this.onerror=null;this.removeAttribute('src');" />
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <p class="lead">I am an ML scientist and a Biostatistics &amp; Bioinformatics PhD candidate at Emory University. I build <b>statistical and machine-learning methods</b> for high-dimensional biomedical data — across genomics, single-cell data, and medical imaging.</p>
+    <p>Previously, I was a research scientist in medical AI, where I built production deep-learning pipelines for brain MRI, supported FDA-cleared products, and co-invented several granted U.S. patents. I'm now seeking <b>ML Scientist / Research Scientist</b> roles where strong statistics meets applied machine learning.</p>
+  </div>
+</section>
+
+<!-- ===================== SKILLS =====================
+     ADD a category: copy one <div class="skill-row">...</div>.
+     ADD a chip: add a <span>NewSkill</span> inside a .chips div. -->
+<section class="sec" id="skills">
+  <div class="wrap">
+    <div class="eyebrow">Skills</div>
+    <div class="skill-row"><span class="cat">Languages</span><div class="chips"><span>Python</span><span>R</span><span>Bash</span><span>SQL</span></div></div>
+    <div class="skill-row"><span class="cat">ML / Deep Learning</span><div class="chips"><span>PyTorch</span><span>Transfer learning</span><span>Transformers</span><span>Multimodal fusion</span></div></div>
+    <div class="skill-row"><span class="cat">Statistics</span><div class="chips"><span>Penalized regression</span><span>Hypothesis testing</span><span>GWAS / eQTL</span></div></div>
+    <div class="skill-row"><span class="cat">Genomics</span><div class="chips"><span>Single-cell (Seurat/Scanpy)</span><span>TWAS</span><span>RNA-seq pipelines</span></div></div>
+    <div class="skill-row"><span class="cat">Tooling</span><div class="chips"><span>Git</span><span>SLURM / HPC</span><span>Linux</span><span>Docker</span></div></div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS =====================
+     PROJECT CARD: to ADD a project, copy one whole
+        <article class="card"> ... </article>  block and edit it.
+     BADGE: the blue "Invited talk" label is a link. Edit its href to your
+     conference page, and the text between >...< to any label you want
+     ("Award", "Best Poster", "Preprint"). Remove it by deleting the <a class="badge"> line. -->
+<section class="sec" id="projects">
+  <div class="wrap">
+    <div class="eyebrow">Selected Projects</div>
+
+    <article class="card">
+      <h3>scTWASTransfer — transfer learning for cell-type-specific gene expression</h3>
+      <p>Transfers signal from large bulk eQTL panels to small single-cell datasets, improving cell-type-specific expression prediction and disease-gene discovery.</p>
+      <div class="card-foot">
+        <span class="tag">Python · R · penalized regression</span>
+        <div class="foot-right">
+          <a class="badge" href="https://whova.com/embedded/session/fjNE%40pWfKIOFTk6DLwgDHOTDYfWWAFRMH8B7fzLOT%404%3D/5216575/?widget=primary" target="_blank" rel="noopener">Invited talk</a>
+          <a href="https://github.com/YOUR-USERNAME/sctwastransfer" target="_blank" rel="noopener">Code →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Brain MRI deep learning (medical AI, industry)</h3>
+      <p>Cascade-transformer models fusing 3D MRI with tabular clinical data for diagnostic products; contributed to FDA clearance and granted patents.</p>
+      <div class="card-foot">
+        <span class="tag">PyTorch · multimodal fusion</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Single-cell multiome of developmental toxicity</h3>
+      <p>Trajectory and differential-expression analysis showing how an environmental exposure reorganizes cell differentiation during development.</p>
+      <div class="card-foot">
+        <span class="tag">Seurat · Slingshot</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE =====================
+     ADD an entry: copy one <div class="entry">...</div> block. -->
+<section class="sec" id="experience">
+  <div class="wrap">
+    <div class="eyebrow">Experience</div>
+    <div class="entry">
+      <div class="role">Graduate Researcher — Emory University <span class="when">· 2023 – present</span></div>
+      <p>Statistical and ML method development for genomics; first-author manuscripts and invited conference talks.</p>
+    </div>
+    <div class="entry">
+      <div class="role">Research Scientist — VUNO <span class="when">· medical AI</span></div>
+      <p>Deep-learning pipelines for neuroimaging; FDA-clearance support; multiple granted U.S. patents.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PUBLICATIONS =====================
+     ADD an item: copy one <div class="pub">...</div> block.
+     Wrap your own name in <b>...</b> so it stands out. -->
+<section class="sec" id="publications">
+  <div class="wrap">
+    <div class="eyebrow">Publications &amp; Patents</div>
+    <div class="pub"><b>Dongsoo Lee</b>, et al. <i>Your paper title here.</i> Venue, 2026. <a href="#">PDF</a></div>
+    <div class="pub">U.S. Patent No. XXXXXXX — <i>Patent title here.</i> (Granted)</div>
+    <p style="margin-top:16px;color:var(--ink-soft);font-size:15px">Full list on <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <p class="contact">
+      <b>Email:</b> dongsoo.lee@emory.edu<br />
+      <b>Location:</b> Atlanta, GA<br />
+      <b>Links:</b>
+      <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">© 2026 Dongsoo Lee · Hosted on GitHub Pages</div>
+</footer>
+
+</body>
+</html>
