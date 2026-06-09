@@ -71,12 +71,21 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 /* ---- NAV (sticky top bar) ---- */
 .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav .brand{display:flex;align-items:center;font-family:var(--display);font-weight:700;font-size:19px;color:var(--navy)} .nav .brand img{height:45px;width:auto;display:block}
+.nav .brand{display:flex;align-items:center;font-family:var(--display);font-weight:700;font-size:19px;color:var(--navy)} .nav .brand img{height:38px;width:auto;display:block}
 .nav .brand:hover{text-decoration:none}
 .nav ul{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
 .nav ul a{color:var(--ink-soft);font-size:15px;font-weight:500}
 .nav ul a:hover{color:var(--navy);text-decoration:none}
-@media(max-width:700px){.nav ul{gap:15px;font-size:13px}.nav .brand img{height:30px}}
+.nav-toggle{display:none;background:none;border:none;font-size:26px;line-height:1;color:var(--navy);cursor:pointer;padding:4px 6px}
+@media(max-width:700px){
+  .nav-toggle{display:block}
+  .nav .brand img{height:30px}
+  .nav ul{position:absolute;left:0;right:0;top:64px;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 14px 26px -16px rgba(1,33,105,.4);max-height:0;overflow:hidden;transition:max-height .28s ease}
+  .nav.open ul{max-height:360px}
+  .nav ul li{width:100%}
+  .nav ul a{display:block;padding:14px 28px;font-size:16px;border-top:1px solid var(--line)}
+  .nav ul a:hover{background:var(--tint);text-decoration:none}
+}
 
 /* ---- HERO (the navy "thesis" band) ---- */
 .hero{background:linear-gradient(135deg,var(--navy),var(--navy-deep));color:var(--white)}
@@ -150,7 +159,8 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 <header class="nav">
   <div class="wrap">
     <a href="#" class="brand"><img src="DL_logo.png" alt="Dongsoo Lee" /></a>
-    <ul>
+    <button class="nav-toggle" aria-label="Open menu" onclick="this.closest('.nav').classList.toggle('open')">&#9776;</button>
+    <ul onclick="this.closest('.nav').classList.remove('open')">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
