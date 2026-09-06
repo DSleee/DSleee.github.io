@@ -29,6 +29,7 @@
        BADGE ........... the blue "Invited talk" label
        EXPERIENCE ...... work history
        PUBLICATIONS .... papers & patents
+       AWARDS .......... honors & awards
      ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -91,7 +92,7 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 .hero{background:linear-gradient(135deg,var(--navy),var(--navy-deep));color:var(--white)}
 .hero .wrap{padding:70px 28px 64px;display:grid;grid-template-columns:1fr 200px;gap:48px;align-items:center}
 .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(42px,7vw,72px);line-height:1.02;letter-spacing:-.02em}
-.hero .tag{margin-top:18px;font-size:clamp(17px,2vw,21px);line-height:1.5;color:rgba(255,255,255,.82);max-width:42ch}
+.hero .tag{margin-top:18px;font-size:clamp(17px,2vw,21px);line-height:1.5;font-style:normal;color:rgba(255,255,255,.82);max-width:42ch}
 .hero .links{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
 .hero .links a{border:1.5px solid rgba(255,255,255,.45);color:var(--white);border-radius:999px;padding:8px 18px;font-size:14px;font-weight:600;transition:background .2s,color .2s}
 .hero .links a:hover{background:var(--white);color:var(--navy);text-decoration:none}
@@ -107,7 +108,7 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 .lead b{color:var(--navy)}
 
 /* ---- SKILLS ---- */
-.skill-row{display:grid;grid-template-columns:160px 1fr;gap:18px;padding:12px 0;border-bottom:1px solid var(--line)}
+.skill-row{display:grid;grid-template-columns:185px 1fr;gap:18px;padding:12px 0;border-bottom:1px solid var(--line)}
 .skill-row:last-child{border-bottom:none}
 .skill-row .cat{font-family:var(--display);font-weight:600;color:var(--navy)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
@@ -136,6 +137,14 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 .pub{padding:13px 0;border-bottom:1px solid var(--line)}
 .pub:last-child{border-bottom:none}
 .pub b{color:var(--navy)}
+
+/* ---- AWARDS ---- */
+.award{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.award:last-child{border-bottom:none}
+.award .name{font-family:var(--display);font-weight:600;color:var(--navy);font-size:17px}
+.award .org{display:block;color:var(--ink-soft);font-size:15px;font-family:var(--body);font-weight:400}
+.award .yr{color:var(--ink-soft);font-size:14px;white-space:nowrap}
+@media(max-width:520px){.award{grid-template-columns:1fr}}
 
 .contact{line-height:2.1}
 .contact b{font-family:var(--display);color:var(--navy)}
@@ -166,6 +175,7 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#awards">Awards</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -176,15 +186,17 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
   <div class="wrap">
     <div>
       <h1>Dongsoo Lee</h1>
-      <p class="tag">ML Scientist &amp; Biostatistics PhD candidate building statistical learning methods for genomics and medical AI.</p>
+      <p class="tag">ML Scientist &amp; Biostatistics PhD candidate</p>
 
       <!-- LINK BUTTONS: edit each href and label. Add a button by copying one <a> line.
            RESUME: upload your CV as  resume.pdf  to the repo; this button points to it. -->
       <div class="links">
         <a href="resume.pdf">Resume</a>
-        <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/dongsoo-lee-68a387383/" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- Google Scholar: paste your profile ID over YOUR-ID and delete the
+             comment markers on the next line to switch this button back on.
         <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank" rel="noopener">Google Scholar</a>
+        -->
         <a href="mailto:dongsoo.lee@emory.edu">Email</a>
       </div>
     </div>
@@ -201,12 +213,10 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 <section class="sec" id="about">
   <div class="wrap">
     <div class="eyebrow">About</div>
-    <p class="lead"><p><b style="color:#1f4fb5">Advancing precision medicine through reliable, interpretable, and clinically actionable machine learning.</b></p> 
-    <p>I am <b style="color:#1f4fb5">a PhD candidate in Biostatistics &amp; Bioinformatics at Emory University</b> and a former medical AI research scientist. My work combines rigorous statistics with scalable machine learning to analyze high-dimensional biomedical data across genomics, single-cell biology, medical imaging, and clinical applications.</p> 
-    <p>My research focuses on developing methods that turn noisy biological and medical data into interpretable insights. Before my PhD, I built production deep-learning pipelines for brain MRI, contributed to FDA-cleared AI products, and co-invented multiple granted U.S. patents.</p> 
-    <p>Currently seeking ML Scientist / Research Scientist roles at the intersection of biomedical AI, statistical learning, and precision medicine.</p> 
-    
-    
+    <p class="lead"><b style="color:#1f4fb5">Advancing precision medicine through reliable, interpretable, and clinically actionable statistical learning methods.</b></p>
+    <p>I am <b style="color:#1f4fb5">a PhD candidate in Biostatistics &amp; Bioinformatics at Emory University</b> and a former medical AI research scientist with 3+ years of industry R&amp;D. My work combines statistics with scalable machine learning to analyze high-dimensional biomedical data across genomics, single-cell biology, medical imaging, and clinical applications.</p>
+    <p>My research focuses on developing methods that turn biological and medical data into interpretable insights. Before my PhD, I built production deep-learning pipelines for brain MRI, authored the clinical validation reports behind an <b style="color:#1f4fb5">FDA 510(k) clearance</b>, and co-invented three granted U.S. patents.</p>
+    <p>Currently seeking Statistician / ML Scientist / Research Scientist roles at the intersection of biomedical AI, statistical learning, and precision medicine.</p>
   </div>
 </section>
 
@@ -216,11 +226,13 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 <section class="sec" id="skills">
   <div class="wrap">
     <div class="eyebrow">Skills</div>
-    <div class="skill-row"><span class="cat">Languages</span><div class="chips"><span>Python</span><span>R</span><span>Bash</span><span>SQL</span></div></div>
-    <div class="skill-row"><span class="cat">ML / Deep Learning</span><div class="chips"><span>PyTorch</span><span>Transfer learning</span><span>Transformers</span><span>Multimodal fusion</span></div></div>
-    <div class="skill-row"><span class="cat">Statistics</span><div class="chips"><span>Penalized regression</span><span>Hypothesis testing</span><span>GWAS / eQTL</span></div></div>
-    <div class="skill-row"><span class="cat">Genomics</span><div class="chips"><span>Single-cell (Seurat/Scanpy)</span><span>TWAS</span><span>RNA-seq pipelines</span></div></div>
-    <div class="skill-row"><span class="cat">Tooling</span><div class="chips"><span>Git</span><span>SLURM / HPC</span><span>Linux</span><span>Docker</span></div></div>
+    <div class="skill-row"><span class="cat">Statistical methods</span><div class="chips"><span>Statistical inference</span><span>Hypothesis testing </span><span>High-dimensional data analysis </span><span>Simulation studies </span><span>Penalized regression</span><span>Transfer learning</span></div></div>
+    <div class="skill-row"><span class="cat">Statistical genetics</span><div class="chips"><span>GWAS</span><span>TWAS</span><span>eQTL</span><span>Fine-mapping</span><span>Co-localization</span><span>Multi-ancestry analysis</span></div></div>
+    <div class="skill-row"><span class="cat">Genomics</span><div class="chips"><span>scRNA-seq</span><span>scATAC-seq</span><span>Bulk RNA-seq</span><span>Multiome integration</span></div></div>
+    <div class="skill-row"><span class="cat">Machine Learning &amp; AI</span><div class="chips"><span>Deep Learning</span><span>PyTorch</span><span>Transformers</span><span>Multimodal fusion</span></div></div>
+    <div class="skill-row"><span class="cat">Programming</span><div class="chips"><span>Python</span><span>R</span><span>SQL</span><span>SAS</span><span>SPSS</span></div></div>
+    <div class="skill-row"><span class="cat">Tools</span><div class="chips"><span>Git</span><span>Docker</span><span>SLURM / HPC</span><span>Linux</span><span>Microsoft Office</span></div></div>
+    <div class="skill-row"><span class="cat">Languages</span><div class="chips"><span>Korean (native)</span><span>English (full professional)</span></div></div>
   </div>
 </section>
 
@@ -235,20 +247,35 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
     <div class="eyebrow">Selected Projects</div>
 
     <article class="card">
-      <h3>scTWASTransfer — transfer learning for cell-type-specific gene expression</h3>
-      <p>Transfers signal from large bulk eQTL panels to small single-cell datasets, improving cell-type-specific expression prediction and disease-gene discovery.</p>
+      <h3>TL-TWAS / scTWASTransfer — transfer learning for transcriptome-wide association studies</h3>
+      <p>Borrows strength from large-scale bulk transcriptomic resources to power TWAS in underpowered target contexts, improving cell-type-specific expression prediction.</p>
       <div class="card-foot">
-        <span class="tag">Python · R · penalized regression</span>
+        <span class="tag">Transferlearning · penalized regression</span>
         <div class="foot-right">
-          <a class="badge" href="https://whova.com/embedded/session/fjNE%40pWfKIOFTk6DLwgDHOTDYfWWAFRMH8B7fzLOT%404%3D/5216575/?widget=primary" target="_blank" rel="noopener">Invited talk</a>
-          <a href="https://github.com/YOUR-USERNAME/sctwastransfer" target="_blank" rel="noopener">Code →</a>
+          <a class="badge" href="https://www.geneticepi.org/2026agenda" target="_blank" rel="noopener">IGES 2026 · Platform talk</a>
+<a class="badge" href="https://whova.com/embedded/session/fjNE%40pWfKIOFTk6DLwgDHOTDYfWWAFRMH8B7fzLOT%404%3D/5216575/?widget=primary" target="_blank" rel="noopener">STATGEN 2026 · Invited talk</a>
         </div>
       </div>
     </article>
 
     <article class="card">
+  <h3>scMultiMap</h3>
+  <p>
+    Statistical framework for linking enhancers to their target genes within individual cell types from single-cell multimodal data.
+    Published in <i>Nature Communications</i> (2025).
+  </p>
+  <div class="card-foot">
+    <span class="tag">Single-cell multiome · regulatory genomics</span>
+    <div class="foot-right">
+      <a class="badge" href="https://www.nature.com/articles/s41467-025-59306-z" target="_blank" rel="noopener">
+        Nat Commun 2025
+      </a>
+    </div>
+  </div>
+</article>
+    <article class="card">
       <h3>Brain MRI deep learning (medical AI, industry)</h3>
-      <p>Cascade-transformer models fusing 3D MRI with tabular clinical data for diagnostic products; contributed to FDA clearance and granted patents.</p>
+      <p>Cascade-transformer models fusing 3D MRI with tabular clinical data to predict medial temporal lobe atrophy (MTA) scores; deployed as a product feature and supported an FDA 510(k) clearance.</p>
       <div class="card-foot">
         <span class="tag">PyTorch · multimodal fusion</span>
       </div>
@@ -256,9 +283,9 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 
     <article class="card">
       <h3>Single-cell multiome of developmental toxicity</h3>
-      <p>Trajectory and differential-expression analysis showing how an environmental exposure reorganizes cell differentiation during development.</p>
+      <p>Integrated scRNA-seq and scATAC-seq trajectory analysis showing how a toxicant exposure reorganizes developmental gene-regulatory programs.</p>
       <div class="card-foot">
-        <span class="tag">Seurat · Slingshot</span>
+        <span class="tag">Multiome analysis</span>
       </div>
     </article>
 
@@ -271,12 +298,16 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
   <div class="wrap">
     <div class="eyebrow">Experience</div>
     <div class="entry">
-      <div class="role">Graduate Researcher — Emory University <span class="when">· 2023 – present</span></div>
-      <p>Statistical and ML method development for genomics; first-author manuscripts and invited conference talks.</p>
+      <div class="role">Graduate Researcher — Emory University, Biostatistics &amp; Bioinformatics <span class="when">· Sep 2023 – present</span></div>
+      <p>Developing transfer-learning statistical frameworks for high-dimensional genomic association studies, integrating single-cell and bulk RNA-seq to detect Alzheimer's disease risk genes.</p>
     </div>
     <div class="entry">
-      <div class="role">Research Scientist — VUNO <span class="when">· medical AI</span></div>
-      <p>Deep-learning pipelines for neuroimaging; FDA-clearance support; multiple granted U.S. patents.</p>
+      <div class="role">Research Scientist — VUNO Inc., Brain Team <span class="when">· Feb 2020 – Aug 2023 (Research Lead, 2022–23)</span></div>
+      <p>Authored clinical validation reports and led cross-functional teams to secure FDA 510(k) clearance for an AI brain-MRI segmentation product. Inventor on three granted U.S. patents.</p>
+    </div>
+    <div class="entry">
+      <div class="role">Education <span class="when">· Emory · Seoul National University · Konkuk University</span></div>
+      <p>Ph.D. candidate, Biostatistics &amp; Bioinformatics, Emory (expected 2028) · M.S., Biostatistics, Emory (2026) · M.P.H., Biostatistics, SNU (2020) · B.A., Applied Statistics, Konkuk (2018)</p>
     </div>
   </div>
 </section>
@@ -287,9 +318,56 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 <section class="sec" id="publications">
   <div class="wrap">
     <div class="eyebrow">Publications &amp; Patents</div>
-    <div class="pub"><b>Dongsoo Lee</b>, et al. <i>Your paper title here.</i> Venue, 2026. <a href="#">PDF</a></div>
-    <div class="pub">U.S. Patent No. XXXXXXX — <i>Patent title here.</i> (Granted)</div>
-    <p style="margin-top:16px;color:var(--ink-soft);font-size:15px">Full list on <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank" rel="noopener">Google Scholar</a>.</p>
+
+    <p style="color:var(--ink-soft);font-size:15px;margin-bottom:8px">Selected from 10 peer-reviewed articles. *equal contribution; †corresponding author.</p>
+
+    <div class="pub">Su C†, <b>Lee D</b>, Jin P, Zhang J†. <i>Cell-type-specific mapping of enhancers and target genes from single-cell multimodal data.</i> Nature Communications, 16(1), 3941 (2025).</div>
+    <div class="pub">Lee SJ*, <b>Lee D</b>*, Suh CH†, Jeong SY, Shin HM, Jung W, et al. <i>Development and validation of a deep learning–based automatic classification algorithm for the medial temporal lobe atrophy score using a multi-modality cascade transformer.</i> Clinical Radiology, 106993 (2025).</div>
+    <div class="pub">Park JY, Lee JJ, Lee Y, <b>Lee D</b>, Gim J, Farrer L, Lee KH†, Won S†. <i>Machine learning–based quantification for disease uncertainty increases the statistical power of genetic association studies.</i> Bioinformatics, 39(9), btad534 (2023).</div>
+    <div class="pub"><b>Lee D</b>, Suh CH†, Kim J, Jung W, Park C, Jung KH, et al. <i>Augmenting MRI with tabular features for enhanced and interpretable medial temporal lobe atrophy prediction.</i> MICCAI Workshop on Machine Learning in Clinical Neuroimaging, 125–134. Springer (2022).</div>
+    <div class="pub">Park JY, <b>Lee D</b>, Lee JJ, Gim J, Gunasekaran TI, Choi KY, et al., Lee KH†. <i>A missense variant in SHARPIN mediates Alzheimer's disease–specific brain damage.</i> Translational Psychiatry, 11(1) (2021).</div>
+    <div class="pub">Kim J*, <b>Lee D</b>*, Woo H, Kim H, Son B, Park M, Hong S†. <i>Impact of particulate matter on the clinical characteristics of rhinitis.</i> The Laryngoscope (2020).</div>
+
+    <p style="margin-top:26px;color:var(--ink-soft);font-size:15px;margin-bottom:8px">3 granted U.S. patents; 10+ international patents.</p>
+
+    <div class="pub"><b>Lee DS</b>, Oh H, Park S, Sung J, Hong E, Kim WJ, et al. <i>Method for detecting white matter lesions based on medical image.</i> U.S. Patent 12,236,605 (Feb 25, 2025).</div>
+    <div class="pub">Oh H, Park S, Sung J, Kim WJ, Hong E, <b>Lee DS</b>. <i>Method for predicting disease based on medical image.</i> U.S. Patent 12,125,199 (Oct 22, 2024).</div>
+    <div class="pub">Hong E, Jung W, Park S, Oh H, <b>Lee DS</b>, Kim WJ, Sung J. <i>Estimating cortical region thickness by extracting interfaces as mesh data.</i> U.S. Patent 12,094,147 (Sep 17, 2024).</div>
+
+    <p style="margin-top:26px;color:var(--ink-soft);font-size:15px;margin-bottom:8px">Selected presentations.</p>
+
+    <div class="pub"><b>IGES</b>, Oct 2026 (platform presentation). <i>TL-TWAS: Transfer Learning for TWAS Using Large-Scale Transcriptomic Resources in Underpowered Target Contexts.</i></div>
+    <div class="pub"><b>STATGEN</b>, May 2026 (invited session). <i>scTWASTransfer: single-cell transcriptome-wide association studies via transfer learning with bulk and single-cell data.</i></div>
+    <div class="pub"><b>RSNA Annual Meeting</b>, Nov 2022. <i>Deep learning–based automatic MTA score classification using a multi-modality cascade transformer.</i></div>
+    <div class="pub"><b>MICCAI Workshop on Machine Learning in Clinical Neuroimaging</b>, Sep 2022. <i>Augmenting MRI with tabular features for interpretable MTA prediction.</i></div>
+  </div>
+</section>
+
+<!-- ===================== AWARDS =====================
+     ADD an item: copy one <div class="award">...</div> block.
+     Extras you can paste in the same shape if you want them listed:
+       Brain Korea 21 Plus Scholarship · Seoul National University · 2018
+       Third Prize, Poster Session · KOSHIS Fall Conference · 2019 -->
+<section class="sec" id="awards">
+  <div class="wrap">
+    <div class="eyebrow">Honors &amp; Awards</div>
+
+    <div class="award">
+      <div>
+        <span class="name">Patel–Naik Award</span>
+        <span class="org">1st place, research proposal · Emory University</span>
+      </div>
+      <span class="yr">2026</span>
+    </div>
+
+    <div class="award">
+      <div>
+        <span class="name">Cole and Bain Scholarship</span>
+        <span class="org">Emory University</span>
+      </div>
+      <span class="yr">2023</span>
+    </div>
+
   </div>
 </section>
 
@@ -300,15 +378,14 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
     <p class="contact">
       <b>Email:</b> dongsoo.lee@emory.edu<br />
       <b>Location:</b> Atlanta, GA<br />
-      <b>Links:</b>
-      <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a> ·
-      <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a>
+      <b>LinkedIn:</b>
+      <a href="https://www.linkedin.com/in/dongsoo-lee-68a387383/" target="_blank" rel="noopener">dongsoo-lee</a>
     </p>
   </div>
 </section>
 
 <footer class="foot">
-  <div class="wrap">© 2026 Dongsoo Lee · Hosted on GitHub Pages</div>
+  <div class="wrap">© 2026 Dongsoo Lee</div>
 </footer>
 
 </body>
